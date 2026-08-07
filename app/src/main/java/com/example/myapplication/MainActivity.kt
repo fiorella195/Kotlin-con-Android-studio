@@ -1,8 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -12,8 +12,12 @@ class MainActivity : AppCompatActivity() {
 
         //val boton = findViewById<Button>(R.id.boton) // definir un elemento
 
+        
+
         val boton: Button = findViewById(R.id.boton)
         boton.setOnClickListener {
-            Toast.makeText(this, "esto es un toast", Toast.LENGTH_SHORT).show() }
+            val intent = Intent(this, MySecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
